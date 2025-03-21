@@ -27,11 +27,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Set initial states first (this is important)
   gsap.set("nav", { y: -200, opacity: 0 });
-  gsap.set(".hero_content h1", { y: 20, opacity: 0 });
-  gsap.set(".hero_content p", { y: 30, opacity: 0 });
-  gsap.set(".hero_content button", { y: 40, opacity: 0 });
+  gsap.set(".hero_content_left h1", { y: 20, opacity: 0 });
+  gsap.set(".hero_content_left p", { y: 30, opacity: 0 });
   gsap.set(".nav-links li", { opacity: 0, y: 20 });
   gsap.set(".nav-resume", { opacity: 0, y: 20 });
+  gsap.set(".hero_content_right img", { y: 40, opacity: 0 });
+  gsap.set(".keyboard-img", { y: 40, opacity: 0 });
 
   // Initial animations when page loads
   const tl = gsap.timeline();
@@ -46,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Animate hero content
   tl.to(
-    ".hero_content h1",
+    ".hero_content_left h1",
     {
       y: 0,
       opacity: 1,
@@ -57,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
   tl.to(
-    ".hero_content p",
+    ".hero_content_left p",
     {
       y: 0,
       opacity: 1,
@@ -66,14 +67,24 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     "-=0.7"
   );
-
   tl.to(
-    ".hero_content button",
+    ".hero_content_right img",
     {
       y: 0,
       opacity: 1,
       duration: 1,
       ease: "power4.out",
+    },
+    "-=0.7"
+  );
+  tl.to(
+    ".keyboard-img",
+    {
+      y: 0,
+      opacity: 1,
+      duration: 3,
+      ease: "power4.out",
+      delay: 2 // Delay the animation by 2 seconds
     },
     "-=0.7"
   );
@@ -95,9 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ease: "power4.out",
   });
 
-  
-
-//   Optional: Add scroll-triggered animations
+  // Optional: Add scroll-triggered animations
   // Example: Fade in elements as they come into view
   gsap.utils.toArray(".hero_section, .nav-container").forEach((section) => {
     gsap.from(section, {
@@ -147,3 +156,39 @@ window.addEventListener("load", function () {
       });
   }, 1000); // Check after 1 second
 });
+
+const roles = [
+    "Full Stack Developer",
+    "UI/UX Designer",
+    "WordPress Developer",
+    "Mobile App Developer",
+    "E-Commerce Developer",
+    "Data Analyst"
+];
+
+let currentIndex = 0;
+
+function changeRole() {
+    const roleContainer = document.querySelector('.role-container');
+    const roleElement = document.querySelector('.role');
+
+    // Update the role text
+    roleElement.textContent = roles[currentIndex];
+    
+    // Add active class to fade in
+    roleElement.classList.add('active');
+
+    // Remove active class after a delay to fade out
+    setTimeout(() => {
+        roleElement.classList.remove('active');
+    }, 1500); // Show each role for 1.5 seconds
+
+    // Update the index for the next role
+    currentIndex = (currentIndex + 1) % roles.length;
+
+    // Change role every 2.5 seconds 
+    setTimeout(changeRole, 2500);
+}
+
+// Start the role change
+changeRole();

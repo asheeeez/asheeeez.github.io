@@ -12,7 +12,12 @@ body {
     min-height: 100vh;
     box-sizing: border-box;
     overflow-x: hidden;
-    background-color:#24282a;
+    background-color: #110404;
+    font-family: Arial, sans-serif;
+}
+p {
+    color: #f6f7eb;
+    font-family: "Mulish", sans-serif;
 }
 
 /* Font Families */
@@ -65,6 +70,8 @@ nav {
     z-index: 9;
     display: flex;
     justify-content: space-between;
+    background-color: #333; /* Background color */
+    color: white; /* Text color */
 }
 
 .nav-container {
@@ -84,20 +91,35 @@ nav {
     justify-content: space-between;
     align-items: center;
     border-radius: 4px;
+    display: flex;
+    flex-direction: row; /* Changed to flex row */
+    align-items: center; /* Centered content */
+    padding: 10px;
 }
 
-.nav-links {
-    margin-left: 150px;
+.nav-header {
     display: flex;
-    gap: 20px;
-    justify-content: center;
+    justify-content: space-between;
+    width: 100%;
     align-items: center;
 }
 
+.nav-links ul {
+    margin-left: 150px;
+    list-style: none;
+    padding: 0px;
+    display: flex; /* Changed to flex row */
+    justify-content: space-between; /* Spaced between */
+}
+
+.nav-links li {
+    padding: 10px 0;
+    font-family: "Mulish", sans-serif;
+}
+
 .nav-links a {
+    color: white;
     text-decoration: none;
-    color: #ffffff;
-    font-family: 'Poppins', sans-serif;
 }
 
 .my-links {
@@ -110,33 +132,31 @@ nav {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'mulish', sans-serif;
+    
 }
 
 .nav-resume a {
     display: inline-block;
     padding: 8px 16px;
-    background-color: #73615a;
-    color :white;
+    background-color: #4F1313; /* Coffee color */
+    color: white;
     text-decoration: none;
     border-radius: 4px;
-    font-family: poppins, sans-serif;
     font-weight: 500;
-    transition: background-color 0.3s ease;
+    -webkit-font-smoothing: antialiased; /* For WebKit browsers */
+    -moz-osx-font-smoothing: grayscale; /* For Firefox on macOS */
 }
 
 .nav-resume a:hover {
-    box-shadow: 0 0 15px #73615a, 
-                0 0 15px #73615a,
-                0 0 15px #73615a;
-    transform: scale(1.02);
-    transition: all 0.5s ease;
-    background-color: #73615a;
+    box-shadow: 0 0 12px #4F1313; /* Glow effect */
+    background-color: #4F1313;
+    transition: background-color 2s ease;
 }
 
 .nav-logo {
     position: absolute;
-    top: -30px; /* Adjust this value to position the logo */
+    top: -40px; /* Adjust this value to position the logo */
     left: 0;
     z-index: 99;
 }
@@ -153,19 +173,13 @@ nav {
 
 /* Hero Section Styles */
 .hero_section {
-    height: 100vh;
+    height: 100%;
     width: 100%;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
-    padding-left: 10%;
+    padding: 10% 0 5% 5%;
 }
-
-p {
-    font-family: 'Mulish', sans-serif;
-    color: #f6f7eb;
-}
-
 
 .hero_content_left h1 {
     font-family: 'Philosopher', sans-serif;
@@ -185,20 +199,9 @@ p {
     max-width: 800px;
 }
 
-.hero_section2 {
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-    padding-left: 10%;
-}
 
 .hero_content_left {
     width: 70%;
-    padding: 2rem;
     padding-left: 0;
 }
 
@@ -213,13 +216,39 @@ p {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
+    transition: transform 0.3s ease;
 }
 
+.hero_content_right img:hover {
+    transform: translateY(-5px);
+}
+.hero_section2 {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.hero_section2_bottom {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
 @media (max-width: 768px) {
     .hero_section {
+        margin-top: 20%;
         flex-direction: column;
-        padding-left: 0;
+        padding-left: 20px; /* Added margin left */
+        padding-right: 20px; /* Added margin right */
+        padding-top: 20px; /* Added margin top */
         justify-content: center;
+        align-items: center; /* Centered content */
+        gap: 20px; /* Added vertical gap between contents */
     }
     
     .hero_content_left,
@@ -232,25 +261,38 @@ p {
     }
     
     .hero_content_right img {
-        max-width: 80%;
-    }
-
-    .hero_content h1 {
-        font-size: 2.5rem; /* Fixed size instead of clamp */
+        max-width: 100%;
     }
     
     .hero_content_left h1 {
         font-size: 3rem; /* Responsive size for mobile */
+    
     }
-
-    .hero_content p {
-        font-size: 1rem;
-        padding: 0 1rem;
+    .hero_content_left span {
+        font-size: 1.8rem; /* Responsive size for mobile */
+    }
+    .hero_content_left p {
+        font-size: 1.2rem; /* Responsive size for mobile */
+    
     }
     
-    .hero_section2 {
-        padding-left: 0;
-        justify-content: center;
+    .nav-toggle {
+        display: block; /* Show toggle button on mobile */
+    }
+
+    .nav-links {
+        display: flex; /* Show links in a column */
+        flex-direction: column;
+        width: 100%;
+        background-color: #333; /* Match nav background */
+        position: absolute;
+        top: 60px; /* Position below the nav header */
+        left: 0;
+        z-index: 1;
+    }
+
+    .nav-links.active {
+        display: flex; /* Show links when active */
     }
 }
 /* Lenis Smooth Scroll Styles */
@@ -273,3 +315,37 @@ html.lenis {
 .lenis.lenis-scrolling iframe {
     pointer-events: none;
 }
+
+.role-container {
+    position: relative;
+    height: 100px; /* Adjust based on your font size */
+    overflow: hidden;
+    font-size: 5rem; /* Adjust as needed */
+    color: #5c544d; /* Text color */
+    font-weight: bolder;
+}
+
+.role {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.role.active {
+    opacity: 1;
+}
+.keyboard-image-box {
+    position: absolute;
+    bottom: -50%;
+    right: 20%;
+    max-width: 600px;
+}
+.keyboard-image{
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+.keyboard-image:hover {
+    transform: translateY(-10px)
+    }
