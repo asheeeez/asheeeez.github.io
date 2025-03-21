@@ -62,7 +62,7 @@ nav {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 1000;
+    z-index: 9;
     display: flex;
     justify-content: space-between;
 }
@@ -73,7 +73,8 @@ nav {
     left: 50%;
     transform: translateX(-50%);
     width: 80%;
-    z-index: 1000;
+    height: 60px; /* Fixed height */
+    z-index: 9;
     padding: 1rem;
     background: rgba(130, 190, 222, 0);
     backdrop-filter: blur(5px);
@@ -86,9 +87,11 @@ nav {
 }
 
 .nav-links {
+    margin-left: 150px;
     display: flex;
     gap: 20px;
     justify-content: center;
+    align-items: center;
 }
 
 .nav-links a {
@@ -127,8 +130,21 @@ nav {
                 0 0 15px #6e2a2a,
                 0 0 15px #6e2a2a;
     transform: scale(1.02);
-    transition: all 0.1s ease;
+    transition: all 0.5s ease;
     background-color: #e94f37;
+}
+
+.nav-logo {
+    position: absolute;
+    top: -30px; /* Adjust this value to position the logo */
+    left: 0;
+    z-index: 99;
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
 }
 
 .nav-resume a::before {
