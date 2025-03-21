@@ -12,7 +12,7 @@ body {
     min-height: 100vh;
     box-sizing: border-box;
     overflow-x: hidden;
-    background-color:#393e41;
+    background-color:#24282a;
 }
 
 /* Font Families */
@@ -24,7 +24,7 @@ body {
 
 .philosopher-regular {
     font-family: "Philosopher", sans-serif;
-    font-weight: 400;
+    font-weight: 400; /* Fixed typo in weight value */
     font-style: normal;
 }
 
@@ -116,8 +116,8 @@ nav {
 .nav-resume a {
     display: inline-block;
     padding: 8px 16px;
-    background-color: #e94f37;
-    color: white;
+    background-color: #73615a;
+    color :white;
     text-decoration: none;
     border-radius: 4px;
     font-family: poppins, sans-serif;
@@ -126,12 +126,12 @@ nav {
 }
 
 .nav-resume a:hover {
-    box-shadow: 0 0 15px #6e2a2a, 
-                0 0 15px #6e2a2a,
-                0 0 15px #6e2a2a;
+    box-shadow: 0 0 15px #73615a, 
+                0 0 15px #73615a,
+                0 0 15px #73615a;
     transform: scale(1.02);
     transition: all 0.5s ease;
-    background-color: #e94f37;
+    background-color: #73615a;
 }
 
 .nav-logo {
@@ -156,45 +156,103 @@ nav {
     height: 100vh;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    padding-left: 10%;
 }
 
 p {
     font-family: 'Mulish', sans-serif;
     color: #f6f7eb;
 }
-h2 {
-    font-family: 'Mulish', sans-serif;
-    color: #f6f7eb;
-}
 
-.hero_content {
-    text-align: center;
-    padding: 20px;
-}
 
-.hero_content h1 {
-    font-family: 'philosopher';
+.hero_content_left h1 {
+    font-family: 'Philosopher', sans-serif;
     font-size: 6rem;
-    font-weight: bold;
+    font-weight: 700;
     margin-bottom: 1rem;
     color: #f6f7eb;
+    line-height: 1.2;
+    letter-spacing: 0.5px;
 }
 
-.hero_content p {
-    font-size: 1.2rem;
+.hero_content_left p {
+    font-family: 'Mulish', sans-serif;
+    font-size: 1.4rem;
     margin-bottom: 2rem;
+    line-height: 1.6;
+    max-width: 800px;
 }
+
 .hero_section2 {
     height: 100vh;
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
     position: relative;
     overflow: hidden;
+    padding-left: 10%;
 }
 
+.hero_content_left {
+    width: 70%;
+    padding: 2rem;
+    padding-left: 0;
+}
+
+.hero_content_right {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero_content_right img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    .hero_section {
+        flex-direction: column;
+        padding-left: 0;
+        justify-content: center;
+    }
+    
+    .hero_content_left,
+    .hero_content_right {
+        width: 100%;
+    }
+    
+    .hero_content_right {
+        margin-top: 2rem;
+    }
+    
+    .hero_content_right img {
+        max-width: 80%;
+    }
+
+    .hero_content h1 {
+        font-size: 2.5rem; /* Fixed size instead of clamp */
+    }
+    
+    .hero_content_left h1 {
+        font-size: 3rem; /* Responsive size for mobile */
+    }
+
+    .hero_content p {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+    
+    .hero_section2 {
+        padding-left: 0;
+        justify-content: center;
+    }
+}
 /* Lenis Smooth Scroll Styles */
 html.lenis {
     height: auto;
