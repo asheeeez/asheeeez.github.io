@@ -117,44 +117,22 @@
         "Lead social media marketing campaigns resulting in increased event visibility and attendance.",
         "Recognized with a medal of honor for outstanding technical contributions to the event."
       ]
-    },
-    {
-      "organization": "Previous Organization",
-      "position": "Position Two",
-      "url": "https://sample.com",
-      "start_date": "01/01/2010",
-      "end_date": "01/01/2020",
-      "summary": "Short summary about previous volunteer work",
-      "highlights": [
-        "First Duty of Previous Organization",
-        "Second Duty of Previous Organization",
-        "Third Duty of Previous Organization"
-      ]
     }
   ],
   "education": [
     {
-      "institution": "Institution One",
-      "location": "Institution One Location",
+      "institution": "Rungta College of Engineering",
+      "location": "Raipur, C.G, India",
       "url": "https://sample.com",
-      "degrees": [
-        "Master of Science in Computer Science",
-        "Minor in Mathematics"
-      ],
-      "honors": ["Outstanding Student Award", "Dean's List"],
-      "gpa_cumulative": "3.5",
-      "gpa_major": "4.0",
-      "graduation_date": "01/01/2005"
+      "degrees": ["Computer Science Engineering", "2011-2015"],
+      "graduation_date": "(Dropped Out)   Like many successful tech entrepreneurs and developers, my career path prioritized hands-on experience and practical skill development. My technical proficiency and project portfolio demonstrate my capabilities as a developer, following in the footsteps of innovators who have similarly leveraged practical expertise to create impactful solutions."
     },
     {
-      "institution": "Institution Two",
-      "location": "Institution Two Location",
+      "institution": "Carmel Convent School",
+      "location": "Raigarh, C.G, India",
       "url": "https://sample.com",
-      "degrees": ["Bachelor of Science in Physics"],
-      "honors": ["Scholarship Recipient"],
-      "gpa_cumulative": "3.2",
-      "gpa_major": "3.9",
-      "graduation_date": "01/01/2000"
+      "degrees": ["Higher Secondary Certificate"],
+      "graduation_date": "08/07/2011"
     }
   ],
   "skills": [
@@ -188,7 +166,6 @@
       "name": "Solo Travel & Adventure",
       "summary": "Enjoy motorcycle journeys and independent travel experiences that foster problem-solving skills, adaptability, and fresh perspectives applicable to professional challenges.",
       "images": [
-        
         {
           "img_path": "img/adventure1.webp",
           "caption": "Long Rides + Coffee = Bliss"
