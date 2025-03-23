@@ -1,224 +1,226 @@
 {
-    "name": "Ashish B Chauhan",
-    "label": "Full-Stack Developer",
-    "image_path": "img/prof-img.webp",
-    "contact": {
-      "email": "chauhanashi@yahoo.com",
-      "phone": "9893883399",
-      "location": "Raipur, C.G, India"
+  "name": "Ashish B Chauhan",
+  "label": "Full-Stack Developer",
+  "image_path": "img/prof-img.webp",
+  "contact": {
+    "email": "chauhanashi@yahoo.com",
+    "phone": "9893883399",
+    "location": "Raipur, C.G, India"
+  },
+  "summary": "Adaptable Full Stack Web Developer with 1 year of professional experience across tech industries, freelance projects, and IT in the mining sector. Proficient in front-end technologies (HTML, CSS, JavaScript, React) and back-end solutions (Node.js, AWS), with additional expertise in WordPress and WooCommerce development. Demonstrated success delivering local news website projects as a freelancer. Known for exceptional problem-solving abilities through methodical research and strong collaborative skills in team environments. Passionate about creating intuitive, responsive web experiences while continuously expanding technical knowledge to deliver innovative solutions.",
+  "base_url": "127.0.0.1:5500",
+  "social_links": [
+    {
+      "label": "Personal Website",
+      "url": "https://caffeinecoder.site/",
+      "svg_path": "img/globe.svg"
     },
-    "summary": "Adaptable Full Stack Web Developer with 1 year of professional experience across tech industries, freelance projects, and IT in the mining sector. Proficient in front-end technologies (HTML, CSS, JavaScript, React) and back-end solutions (Node.js, AWS), with additional expertise in WordPress and WooCommerce development. Demonstrated success delivering local news website projects as a freelancer. Known for exceptional problem-solving abilities through methodical research and strong collaborative skills in team environments. Passionate about creating intuitive, responsive web experiences while continuously expanding technical knowledge to deliver innovative solutions.",
-    "base_url": "127.0.0.1:5500",
-    "social_links": [
-      {
-        "label": "Personal Website",
-        "url": "https://caffeinecoder.site/",
-        "svg_path": "img/globe.svg"
-      },
-      {
-        "label": "LinkedIn",
-        "url": "https://www.linkedin.com/in/ashish-b-chouhan/",
-        "svg_path": "img/linkedin.svg"
-      },
-      {
-        "label": "GitHub",
-        "url": "https://github.com/asheeeez",
-        "svg_path": "img/github.svg"
-      }
-    ],
-    "work_experience": [
-      {
-        "company": "Sainik Mining, Korba, C.G",
-        "position": "IT Executive",
-        "url": "https://sample.com",
-        "start_date": "08/06/2020",
-        "end_date": "12/11/2024",
-        "summary": "Short summary about present job and what the position entails",
-        "highlights": [
-          "First Duty of Current Job",
-          "Second Duty of Current Job",
-          "Third Duty of Current Job"
-        ]
-      },
-      {
-        "company": "Previous Job",
-        "position": "Position Two",
-        "url": "https://sample.com",
-        "start_date": "01/01/2010",
-        "end_date": "01/01/2020",
-        "summary": "Short summary about previous job and what that position entailed",
-        "highlights": [
-          "First Duty of Previous Job",
-          "Second Duty of Previous Job",
-          "Third Duty of Previous Job"
-        ]
-      }
-    ],
-    "projects": [
-      {
-        "title": "My First Project",
-        "summary": "Short summary about my first project",
-        "url": "https://sample.com",
-        "highlights": [
-          "First Highlight of Project One",
-          "Second Highlight of Project One",
-          "Third Highlight of Project One"
-        ],
-        "images": [
-          {
-            "img_path": "https://picsum.photos/600/338?random=1",
-            "caption": "Image Caption 1"
-          },
-          {
-            "img_path": "https://picsum.photos/600/338?random=2",
-            "caption": "Image Caption 2"
-          },
-          {
-            "img_path": "https://picsum.photos/600/338?random=3",
-            "caption": "Image Caption 3"
-          }
-        ]
-      },
-      {
-        "title": "My Second Project",
-        "summary": "Short summary about my second project",
-        "url": "https://sample.com",
-        "highlights": [
-          "First Highlight of Project Two",
-          "Second Highlight of Project Two",
-          "Third Highlight of Project Two"
-        ],
-        "images": [
-          {
-            "img_path": "https://picsum.photos/600/338?random=4",
-            "caption": "Image Caption 4"
-          },
-          {
-            "img_path": "https://picsum.photos/600/338?random=5",
-            "caption": "Image Caption 5"
-          },
-          {
-            "img_path": "https://picsum.photos/600/338?random=6",
-            "caption": "Image Caption 6"
-          }
-        ]
-      }
-    ],
-    "volunteer_experience": [
-      {
-        "organization": "Latest Organization",
-        "position": "Position One",
-        "url": "https://sample.com",
-        "start_date": "01/01/2020",
-        "end_date": "Present",
-        "summary": "Short summary about present volunteer work",
-        "highlights": [
-          "First Duty of Current Organization",
-          "Second Duty of Current Organization",
-          "Third Duty of Current Organization"
-        ]
-      },
-      {
-        "organization": "Previous Organization",
-        "position": "Position Two",
-        "url": "https://sample.com",
-        "start_date": "01/01/2010",
-        "end_date": "01/01/2020",
-        "summary": "Short summary about previous volunteer work",
-        "highlights": [
-          "First Duty of Previous Organization",
-          "Second Duty of Previous Organization",
-          "Third Duty of Previous Organization"
-        ]
-      }
-    ],
-    "education": [
-      {
-        "institution": "Institution One",
-        "location": "Institution One Location",
-        "url": "https://sample.com",
-        "degrees": [
-          "Master of Science in Computer Science",
-          "Minor in Mathematics"
-        ],
-        "honors": ["Outstanding Student Award", "Dean's List"],
-        "gpa_cumulative": "3.5",
-        "gpa_major": "4.0",
-        "graduation_date": "01/01/2005"
-      },
-      {
-        "institution": "Institution Two",
-        "location": "Institution Two Location",
-        "url": "https://sample.com",
-        "degrees": ["Bachelor of Science in Physics"],
-        "honors": ["Scholarship Recipient"],
-        "gpa_cumulative": "3.2",
-        "gpa_major": "3.9",
-        "graduation_date": "01/01/2000"
-      }
-    ],
-    "skills": [
-      {
-        "name": "My First Skill",
-        "proficiency": 100,
-        "proficiency_label": "Proficiency Level"
-      },
-      {
-        "name": "My Second Skill",
-        "proficiency": 80,
-        "proficiency_label": "Proficiency Level"
-      }
-    ],
-    "interests": [
-      {
-        "name": "My First Hobby",
-        "summary": "Short summary about my first Hobby",
-        "images": [
-          {
-            "img_path": "https://picsum.photos/600/338?random=7",
-            "caption": "Image Caption 7"
-          },
-          {
-            "img_path": "https://picsum.photos/600/338?random=8",
-            "caption": "Image Caption 8"
-          }
-        ]
-      },
-      {
-        "name": "My Second Hobby",
-        "summary": "Short summary about my second hobby",
-        "images": [
-          {
-            "img_path": "https://picsum.photos/600/338?random=9",
-            "caption": "Image Caption 9"
-          },
-          {
-            "img_path": "https://picsum.photos/600/338?random=10",
-            "caption": "Image Caption 10"
-          }
-        ]
-      }
-    ],
-    "languages": [
-      {
-        "language": "English",
-        "fluency": "Native speaker"
-      },
-      {
-        "language": "American Sign Language",
-        "fluency": "Professional Working Proficiency"
-      }
-    ],
-    "references": [
-      {
-        "name": "Person One",
-        "relation": "Previous Boss",
-        "reference": "Some nice things that Person One said about you, your work ethic, and how you provided value to their team."
-      },
-      {
-        "name": "Person Two",
-        "relation": "Previous Coworker",
-        "reference": "More kind things that Person Two said about you, what it was like working with you, and things you've accomplished."
-      }
-    ]
-  }
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/ashish-b-chouhan/",
+      "svg_path": "img/linkedin.svg"
+    },
+    {
+      "label": "GitHub",
+      "url": "https://github.com/asheeeez",
+      "svg_path": "img/github.svg"
+    }
+  ],
+  "work_experience": [
+    {
+      "company": "Sainik Mining, Korba, C.G",
+      "position": "IT Executive",
+      "url": "https://sample.com",
+      "start_date": "08/06/2020",
+      "end_date": "12/11/2024",
+      "summary": "Managed IT infrastructure and provided technical support in the mining industry, ensuring optimal operations of critical systems.",
+      "highlights": [
+        "Administered and maintained server infrastructure, implementing solutions to prevent downtime.",
+        "Performed troubleshooting and technical support for company-wide computing systems.",
+        "Ensured proper functioning of all computer systems for seamless business operations."
+      ]
+    },
+    {
+      "company": "G.Electronics, Raigarh, C.G",
+      "position": "Technical Support Specialist",
+      "url": "https://sample.com",
+      "start_date": "15/08/2018",
+      "end_date": "22/03/2020",
+      "summary": "Provided comprehensive technical support for computer systems and server infrastructure.",
+      "highlights": [
+        "Maintained and optimized computer networks to ensure maximum uptime.",
+        "Performed regular diagnostics and troubleshooting of hardware and software issues.",
+        "Implemented preventative maintenance procedures to extend equipment lifespan."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Citizen Chhattisgarh News Portal",
+      "summary": "Developed and launched a regional news portal from the ground up using WordPress, optimized for performance and user engagement.",
+      "url": "https://citizenchhattisgarh.com",
+      "highlights": [
+        "Built responsive, user-friendly interface with customized WordPress implementation.",
+        "Grew user base to 50,000 visitors in the first month, achieving Google AdSense approval.",
+        "Configured Google Console operations for optimal SEO performance and analytics."
+      ],
+      "images": [
+        {
+          "img_path": "img/homePageCitizen.webp",
+          "caption": "Citizen Chhattisgarh News Portal Home Page"
+        },
+        {
+          "img_path": "img/entSecCitizen.webp",
+          "caption": "Citizen Chhattisgarh Entertainment Section"
+        },
+        {
+          "img_path": "img/techSecCitizen.webp",
+          "caption": "Citizen Chhattisgarh Tech Section"
+        }
+      ]
+    },
+    {
+      "title": "Vaishnav Sangeet Mahavidhyalaya Website",
+      "summary": "Currently developing a modern web platform for an Indian classical dance institution.",
+      "url": "https://vsmv.in",
+      "highlights": [
+        "Designing and implementing responsive frontend interface using React.",
+        "Creating intuitive navigation and information architecture to enhance user experience.",
+        "Implementing custom features to showcase performances, classes, and cultural significance."
+      ],
+      "images": [
+        {
+          "img_path": "",
+          "caption": "Image"
+        },
+        {
+          "img_path": "",
+          "caption": "Image"
+        },
+        {
+          "img_path": "",
+          "caption": "Image"
+        }
+      ]
+    }
+  ],
+  "volunteer_experience": [
+    {
+      "organization": "Madhugunjan Cultural Music & Arts Organisation.",
+      "position": "Technical Manager",
+      "url": "https://vsmv.in",
+      "start_date": "02/04/2022",
+      "end_date": "Present",
+      "summary": "Provide comprehensive technical support and social media management for a national cultural dance event.",
+      "highlights": [
+        "Manage all technical aspects of event production including sound, lighting, and displays.",
+        "Lead social media marketing campaigns resulting in increased event visibility and attendance.",
+        "Recognized with a medal of honor for outstanding technical contributions to the event."
+      ]
+    },
+    {
+      "organization": "Previous Organization",
+      "position": "Position Two",
+      "url": "https://sample.com",
+      "start_date": "01/01/2010",
+      "end_date": "01/01/2020",
+      "summary": "Short summary about previous volunteer work",
+      "highlights": [
+        "First Duty of Previous Organization",
+        "Second Duty of Previous Organization",
+        "Third Duty of Previous Organization"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Institution One",
+      "location": "Institution One Location",
+      "url": "https://sample.com",
+      "degrees": [
+        "Master of Science in Computer Science",
+        "Minor in Mathematics"
+      ],
+      "honors": ["Outstanding Student Award", "Dean's List"],
+      "gpa_cumulative": "3.5",
+      "gpa_major": "4.0",
+      "graduation_date": "01/01/2005"
+    },
+    {
+      "institution": "Institution Two",
+      "location": "Institution Two Location",
+      "url": "https://sample.com",
+      "degrees": ["Bachelor of Science in Physics"],
+      "honors": ["Scholarship Recipient"],
+      "gpa_cumulative": "3.2",
+      "gpa_major": "3.9",
+      "graduation_date": "01/01/2000"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Frontend Development (HTML, CSS, JavaScript, React)",
+      "proficiency": 90,
+      "proficiency_label": "Proficiency Level"
+    },
+    {
+      "name": "Backend Development (Node.js)",
+      "proficiency": 80,
+      "proficiency_label": "Proficiency Level"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Music Exploration",
+      "summary": "Passionate about discovering and analyzing diverse musical genres and artists, expanding cultural appreciation and creative inspiration.",
+      "images": [
+        {
+          "img_path": "img/musicPassion.webp",
+          "caption": "My Music Passion"
+        },
+        {
+          "img_path": "img/musicPassion1.webp",
+          "caption": "Music for Sanity"
+        }
+      ]
+    },
+    {
+      "name": "Solo Travel & Adventure",
+      "summary": "Enjoy motorcycle journeys and independent travel experiences that foster problem-solving skills, adaptability, and fresh perspectives applicable to professional challenges.",
+      "images": [
+        
+        {
+          "img_path": "img/adventure1.webp",
+          "caption": "Long Rides + Coffee = Bliss"
+        },
+
+        {
+          "img_path": "img/adventure2.webp",
+          "caption": "Leap of Faith"
+        }
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Professional Working Proficiency"
+    },
+    {
+      "language": "Hindi",
+      "fluency": "Native Proficiency"
+    }
+  ],
+  "references": [
+    {
+      "name": "Tusli Ram - HR Manager(Sainik Mining)",
+      "relation": "Previous Boss",
+      "reference": "An exceptional IT professional who consistently demonstrated outstanding technical ability in managing our server infrastructure. His quick response time and problem-solving skills were invaluable to maintaining our operations. He approaches challenges methodically and always delivers effective solutions under pressure."
+    },
+    {
+      "name": "Shahajada Khan - Owner(Citizen Chhattisgarh)",
+      "relation": "Previous Client",
+      "reference": "I was thoroughly impressed with how quickly he developed our entire news portal from concept to launch. His technical expertise in WordPress and site optimization helped us achieve remarkable growth in a short time. Most importantly, his ongoing support and immediate response to our technical needs has been exemplary, proving his dedication goes far beyond project completion."
+    }
+  ]
+}
