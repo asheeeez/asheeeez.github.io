@@ -444,7 +444,7 @@ html.lenis {
 .keyboard-image-box {
   position: absolute;
   bottom: -45%;
-  right: 20%;
+  right: 30%;
   max-width: 600px;
 }
 .keyboard-image {
@@ -460,7 +460,7 @@ html.lenis {
 
 .scrolling-text-container {
   position: absolute;
-  top: 20%;
+  top: 0%;
   right: 10%;
   transform: translate(-50%, -50%);
   width: 125px; /* Adjust as needed */
