@@ -6,10 +6,10 @@
     <title>CaffeineCoder</title>
 
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
 
     <!-- Styles -->
     <link rel="stylesheet" href="style.css" />
@@ -31,7 +31,11 @@
       <div class="nav-container">
         <div class="nav-logo">
           <a href="#">
-            <img class="logo" src="caffeineCoder-Logo.webp" alt="CaffeineCoder Logo" />
+            <img
+              class="logo"
+              src="caffeineCoder-Logo.webp"
+              alt="CaffeineCoder Logo"
+            />
           </a>
         </div>
         <div class="nav-links">
@@ -42,12 +46,45 @@
         </div>
         <div class="nav-resume">
           <a
-            href="https://drive.google.com/uc?export=download&id=YOUR_FILE_ID"
+            href="https://drive.google.com/uc?export=download&id=YOUR_RESUME_FILE_ID"
             target="_blank"
             rel="noopener noreferrer"
             >Download Resume</a
           >
         </div>
+      </div>
+    </nav>
+
+    <nav class="mobile-nav">
+      <div class="mobile-nav-container">
+        <div class="mobile-nav-logo">
+          <a href="#">
+            <img
+              class="logo"
+              src="caffeineCoder-Logo.webp"
+              alt="CaffeineCoder Logo"
+            />
+          </a>
+        </div>
+        <div class="mobile-nav-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div class="mobile-nav-links">
+        <ul class="mobile-my-links" style="list-style: none">
+          <li><a href="#">My Projects</a></li>
+          <li><a href="#">Contact</a></li>
+          <li>
+            <a
+              href="https://drive.google.com/uc?export=download&id=YOUR_RESUME_FILE_ID"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Download Resume</a
+            >
+          </li>
+        </ul>
       </div>
     </nav>
 
@@ -60,29 +97,66 @@
               <span class="role">Full Stack Developer</span>
             </div>
           </h1>
-          <p>Specializing in crafting responsive, user-centric web applications with modern JavaScript frameworks and scalable backend solutions. Let's build something extraordinary together.</p>
+          <p>
+            Specializing in crafting responsive, user-centric web applications
+            with modern JavaScript frameworks and scalable backend solutions.
+            Let's build something extraordinary together.
+          </p>
         </div>
         <div class="hero_content_right">
-          <img src="hero-image-caffeine-coder.webp" alt="Ashi's Profile Picture">
+          <img
+            src="hero-image-caffeine-coder.webp"
+            alt="Ashi's Profile Picture"
+          />
         </div>
         <div class="keyboard-image-box">
-          <img class="keyboard-image" src="keyboard-image.webp" alt="keyboard-image">
+          <img
+            class="keyboard-image"
+            src="keyboard-image.webp"
+            alt="keyboard-image"
+          />
         </div>
       </section>
 
       <section class="hero_section2">
-        <p>Keep Scrolling</p>
-        <div class="hero_section2_bottom">
-          <div class="hero_content_left_bottom">
-            <h2>About Me</h2>
-            <p>I'm a passionate developer who loves turning ideas into reality through code. With expertise in both frontend and backend technologies, I create seamless digital experiences that solve real-world problems.</p>
+        <div class="hero_content_left_bottom">
+          <h2>About Me</h2>
+          <p>
+            I'm a passionate developer who loves turning ideas into reality
+            through code. With expertise in both frontend and backend
+            technologies, I create seamless digital experiences that solve
+            real-world problems.
+          </p>
+        </div>
+        <div class="hero_content_right_bottom">
+          <img
+            src="about-me-image.webp"
+            alt="Ashish's desk with a laptop and coding books"
+          />
+        </div>
+        <div class="scrolling-text-container">
+          <div class="scrolling-text">
+            <span>K</span><span>e</span><span>e</span><span>p</span><span>&nbsp;</span>
+            <span>S</span><span>c</span><span>r</span><span>o</span><span>l</span><span>l</span><span>i</span><span>n</span><span>g  </span><span>&nbsp;</span>
+            <span>K</span><span>e</span><span>e</span><span>p</span><span>&nbsp;</span>
+            <span>S</span><span>c</span><span>r</span><span>o</span><span>l</span><span>l</span><span>i</span><span>n</span><span>g  </span><span>&nbsp;</span>
           </div>
-          <div class="hero_content_right_bottom">
-            <img src="about-me-image.webp" alt="My Workspace">
-          </div>
-        </div></dir>
+        </div>
       </section>
 
+      <section class="project_showcase">
+        <h2>Project Showcase</h2>
+        <div class="project_links">
+          <a href="#" data-image="project1.jpg">Project 1</a>
+          <a href="#" data-image="project2.jpg">Project 2</a>
+          <a href="#" data-image="project3.jpg">Project 3</a>
+          <a href="#" data-image="project4.jpg">Project 4</a>
+          <a href="#" data-image="project5.jpg">Project 5</a>
+        </div>
+        <div class="project_image">
+          <img src="" alt="Project Preview" />
+        </div>
+      </section>
     </main>
 
     <!-- Scripts -->
@@ -90,5 +164,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
     <script src="script.js"></script>
+    <!-- <audio id="clickSound" src="click.wav" preload="auto"></audio> -->
   </body>
 </html>
