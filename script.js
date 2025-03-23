@@ -13,26 +13,36 @@ document.addEventListener("DOMContentLoaded", () => {
     infinite: false,
   });
 
-  // Get scroll value
-  lenis.on("scroll", ({ scroll, limit, velocity, direction, progress }) => {
-    console.log({ scroll, limit, velocity, direction, progress });
-  });
-
   function raf(time) {
     lenis.raf(time);
     requestAnimationFrame(raf);
   }
 
   requestAnimationFrame(raf);
+  gsap.timeline({ defaults: { ease: "sine.inOut" } });
 
   // Set initial states first (this is important)
   gsap.set("nav", { y: -200, opacity: 0 });
   gsap.set(".hero_content_left h1", { y: 20, opacity: 0 });
   gsap.set(".hero_content_left p", { y: 30, opacity: 0 });
-  gsap.set(".nav-links li", { opacity: 0, y: 20 });
+  gsap.set(".nav-links li", { opacity: 0, y: -30 });
   gsap.set(".nav-resume", { opacity: 0, y: 20 });
   gsap.set(".hero_content_right img", { y: 40, opacity: 0 });
-  gsap.set(".keyboard-img", { y: 40, opacity: 0 });
+  gsap.set(".keyboard-image", { x: 0, y: 40, opacity: 0.1, rotate: 20 });
+  gsap.set(".scrolling-text-container", { opacity: 1, y: 0 });
+
+  // Scroll-triggered animation for keyboard image
+  gsap.to(".keyboard-image", {
+    rotate: -20,
+    x: -50,
+    y: -350,
+    scrollTrigger: {
+      trigger: ".hero_section2", // You can adjust the trigger element
+      start: "top bottom", // Adjust start position as needed
+      end: "bottom top", // Adjust end position as needed
+      scrub: "true", // Smoothly link animation to scroll
+    },
+  });
 
   // Initial animations when page loads
   const tl = gsap.timeline();
@@ -41,8 +51,16 @@ document.addEventListener("DOMContentLoaded", () => {
   tl.to("nav", {
     y: 0,
     opacity: 1,
-    duration: 0.8,
-    ease: "expoScale",
+    duration: 1,
+    ease: "sine.inOut",
+  });
+  // Animate nav links
+  gsap.to(".nav-links li", {
+    y: 0,
+    opacity: 1,
+    duration: 1,
+    stagger: 0.5,
+    ease: "sine.inOut",
   });
 
   // Animate hero content
@@ -52,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
       y: 0,
       opacity: 1,
       duration: 1,
-      ease: "power4.out",
+      ease: "sine.inOut",
     },
     "-=0.5"
   );
@@ -63,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
       y: 0,
       opacity: 1,
       duration: 1,
-      ease: "power4.out",
+      ease: "sine.inOut",
     },
     "-=0.7"
   );
@@ -73,122 +91,130 @@ document.addEventListener("DOMContentLoaded", () => {
       y: 0,
       opacity: 1,
       duration: 1,
-      ease: "power4.out",
+      ease: "sine.inOut",
     },
     "-=0.7"
   );
   tl.to(
-    ".keyboard-img",
+    ".keyboard-image",
     {
       y: 0,
-      opacity: 1,
+      opacity: 0.4,
       duration: 3,
-      ease: "power4.out",
-      delay: 2 // Delay the animation by 2 seconds
+      ease: "sine.inOut",
+      delay: 0.5, // Delay the animation by 2 seconds
     },
     "-=0.7"
   );
-
-  // Animate nav links
-  gsap.to(".nav-links li", {
-    opacity: 1,
-    y: 0,
-    duration: 1,
-    stagger: 0.2,
-    ease: "power4.out",
-  });
 
   // Animate resume button
   gsap.to(".nav-resume", {
     opacity: 1,
     y: 0,
     duration: 1,
-    ease: "power4.out",
+    ease: "sine.inOut",
   });
 
-  // Optional: Add scroll-triggered animations
-  // Example: Fade in elements as they come into view
-  gsap.utils.toArray(".hero_section, .nav-container").forEach((section) => {
-    gsap.from(section, {
-      scrollTrigger: {
-        trigger: section,
-        start: "top center",
-        toggleActions: "play none none reverse",
-      },
-      opacity: 0.5, // Start at 0.5 opacity instead of 0
-      y: 50,
-      duration: 1,
-      ease: "power4.out",
+  // Add smooth scrolling for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      const targetId = this.getAttribute("href");
+      if (targetId === "#") return;
+
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        lenis.scrollTo(targetElement, {
+          offset: 0,
+          duration: 1.2,
+          easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        });
+      }
     });
   });
-});
 
-// Add smooth scrolling for anchor links
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener("click", function (e) {
-    e.preventDefault();
+  function throttle(func, limit) {
+    let inThrottle;
+    return function () {
+      const context = this;
+      const args = arguments;
+      if (!inThrottle) {
+        func.apply(context, args);
+        inThrottle = true;
+        setTimeout(() => (inThrottle = false), limit);
+      }
+    };
+  }
 
-    const targetId = this.getAttribute("href");
-    if (targetId === "#") return;
-
-    const targetElement = document.querySelector(targetId);
-    if (targetElement) {
-      lenis.scrollTo(targetElement, {
-        offset: 0,
-        duration: 1.2,
-        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      });
-    }
+  window.addEventListener("load", function () {
+    setTimeout(function () {
+      document
+        .querySelectorAll(
+          "nav, .hero_content h1, .hero_content p, .hero_content button, .nav-links li, .nav-resume"
+        )
+        .forEach(function (el) {
+          if (parseFloat(window.getComputedStyle(el).opacity) < 0.5) {
+            el.style.opacity = "1";
+            el.style.transform = "none";
+          }
+        });
+    }, 1000); // Check after 1 second
   });
-});
 
-window.addEventListener("load", function () {
-  setTimeout(function () {
-    document
-      .querySelectorAll(
-        "nav, .hero_content h1, .hero_content p, .hero_content button, .nav-links li, .nav-resume"
-      )
-      .forEach(function (el) {
-        if (parseFloat(window.getComputedStyle(el).opacity) < 0.5) {
-          el.style.opacity = "1";
-          el.style.transform = "none";
-        }
-      });
-  }, 1000); // Check after 1 second
-});
-
-const roles = [
+  const roles = [
     "Full Stack Developer",
     "UI/UX Designer",
     "WordPress Developer",
     "Mobile App Developer",
     "E-Commerce Developer",
-    "Data Analyst"
-];
+    "Data Analyst",
+  ];
 
-let currentIndex = 0;
+  let currentIndex = 0;
 
-function changeRole() {
-    const roleContainer = document.querySelector('.role-container');
-    const roleElement = document.querySelector('.role');
+  function changeRole() {
+    console.log("changeRole function called");
+    const roleContainer = document.querySelector(".role-container");
+    const roleElement = document.querySelector(".role");
 
     // Update the role text
     roleElement.textContent = roles[currentIndex];
-    
+
     // Add active class to fade in
-    roleElement.classList.add('active');
+    roleElement.classList.add("active");
 
     // Remove active class after a delay to fade out
     setTimeout(() => {
-        roleElement.classList.remove('active');
+      roleElement.classList.remove("active");
     }, 1500); // Show each role for 1.5 seconds
 
     // Update the index for the next role
     currentIndex = (currentIndex + 1) % roles.length;
 
-    // Change role every 2.5 seconds 
+    // Change role every 2.5 seconds
     setTimeout(changeRole, 2500);
-}
+  }
 
-// Start the role change
-changeRole();
+  // Start the role change
+  changeRole();
+
+  const mobileNavToggle = document.querySelector(".mobile-nav-toggle");
+  const mobileNavLinks = document.querySelector(".mobile-nav-links");
+
+  mobileNavToggle.addEventListener("click", () => {
+    mobileNavLinks.style.display =
+      mobileNavLinks.style.display === "block" ? "none" : "block";
+  });
+
+  const scrollingTextContainer = document.querySelector('.scrolling-text-container');
+  const scrollingText = document.querySelector('.scrolling-text');
+  const letters = document.querySelectorAll('.scrolling-text span');
+
+  const numLetters = letters.length;
+  const angleIncrement = 360 / numLetters;
+
+  letters.forEach((letter, index) => {
+    letter.style.transform = `rotate(${index * angleIncrement}deg)`;
+  });
+});
