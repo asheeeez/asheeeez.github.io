@@ -12,17 +12,17 @@
     "social_links": [
       {
         "label": "Personal Website",
-        "url": "https://sample.com",
+        "url": "https://caffeinecoder.site/",
         "svg_path": "img/globe.svg"
       },
       {
-        "label": "First Social",
-        "url": "https://sample.com",
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/ashish-b-chouhan/",
         "svg_path": "img/linkedin.svg"
       },
       {
-        "label": "Second Social",
-        "url": "https://sample.com",
+        "label": "GitHub",
+        "url": "https://github.com/asheeeez",
         "svg_path": "img/github.svg"
       }
     ],

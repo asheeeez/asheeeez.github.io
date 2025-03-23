@@ -444,7 +444,7 @@ html.lenis {
 .keyboard-image-box {
   position: absolute;
   bottom: -45%;
-  right: 30%;
+  right: 25%;
   max-width: 600px;
 }
 .keyboard-image {
@@ -497,7 +497,7 @@ html.lenis {
     transform: rotate(0deg);
   }
   100% {
-    transform: rotate(360deg);
+    transform: rotate(-360deg); /* Changed to anticlockwise rotation */
   }
 }
 
@@ -505,53 +505,53 @@ html.lenis {
   transform: rotate(0deg);
 }
 .scrolling-text span:nth-child(2) {
-  transform: rotate(20deg);
+  transform: rotate(-20deg); /* Changed to anticlockwise rotation */
 }
 .scrolling-text span:nth-child(3) {
-  transform: rotate(40deg);
+  transform: rotate(-40deg); /* Changed to anticlockwise rotation */
 }
 .scrolling-text span:nth-child(4) {
-  transform: rotate(60deg);
+  transform: rotate(-60deg); /* Changed to anticlockwise rotation */
 }
 .scrolling-text span:nth-child(5) {
-  transform: rotate(80deg);
+  transform: rotate(-80deg); /* Changed to anticlockwise rotation */
 }
 .scrolling-text span:nth-child(6) {
-  transform: rotate(100deg);
+  transform: rotate(-100deg); /* Changed to anticlockwise rotation */
 }
 .scrolling-text span:nth-child(7) {
-  transform: rotate(120deg);
+  transform: rotate(-120deg); /* Changed to anticlockwise rotation */
 }
 .scrolling-text span:nth-child(8) {
-  transform: rotate(140deg);
+  transform: rotate(-140deg); /* Changed to anticlockwise rotation */
 }
 .scrolling-text span:nth-child(9) {
-  transform: rotate(160deg);
+  transform: rotate(-160deg); /* Changed to anticlockwise rotation */
 }
 .scrolling-text span:nth-child(10) {
-  transform: rotate(180deg);
+  transform: rotate(-180deg); /* Changed to anticlockwise rotation */
 }
 .scrolling-text span:nth-child(11) {
-  transform: rotate(200deg);
+  transform: rotate(-200deg); /* Changed to anticlockwise rotation */
 }
 .scrolling-text span:nth-child(12) {
-  transform: rotate(220deg);
+  transform: rotate(-220deg); /* Changed to anticlockwise rotation */
 }
 .scrolling-text span:nth-child(13) {
-  transform: rotate(240deg);
+  transform: rotate(-240deg); /* Changed to anticlockwise rotation */
 }
 .scrolling-text span:nth-child(14) {
-  transform: rotate(260deg);
+  transform: rotate(-260deg); /* Changed to anticlockwise rotation */
 }
 .scrolling-text span:nth-child(15) {
-  transform: rotate(280deg);
+  transform: rotate(-280deg); /* Changed to anticlockwise rotation */
 }
 .scrolling-text span:nth-child(16) {
-  transform: rotate(300deg);
+  transform: rotate(-300deg); /* Changed to anticlockwise rotation */
 }
 .scrolling-text span:nth-child(17) {
-  transform: rotate(320deg);
+  transform: rotate(-320deg); /* Changed to anticlockwise rotation */
 }
 .scrolling-text span:nth-child(18) {
-  transform: rotate(340deg);
+  transform: rotate(-340deg); /* Changed to anticlockwise rotation */
 }
