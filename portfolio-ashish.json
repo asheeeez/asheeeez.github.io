@@ -80,7 +80,31 @@
       ]
     },
     {
-      "title": "Vaishnav Sangeet Mahavidhyalaya Website",
+      "title": "Chhattisgarh Ki Bhavishya Website",
+      "summary": "Reimagined the website and launched a regional news portal using WordPress, optimized for performance and user engagement.",
+      "url": "https://chhattisgarhkibhavishya.in",
+      "highlights": [
+        "Built responsive, user-friendly interface with customized WordPress implementation.",
+        "Significantly enhanced website performance and user experience by optimizing page load speed and implementing intuitive navigation. Key improvements included image compression, code minification, and strategic caching, resulting in a faster, more engaging experience for visitors.",
+        "Configured Google Console operations for optimal SEO performance and analytics."
+      ],
+      "images": [
+        {
+          "img_path": "img/cgkibhavishya-home.webp",
+          "caption": "Home Page"
+        },
+        {
+          "img_path": "img/cgkibhavishya-post.webp",
+          "caption": "Post Section"
+        },
+        {
+          "img_path": "img/cgkibhavishya-about.webp",
+          "caption": "About Section"
+        }
+      ]
+    },
+    {
+      "title": "Vaishnav Sangeet Mahavidhyalaya Website(Under Development)",
       "summary": "Currently developing a modern web platform for an Indian classical dance institution.",
       "url": "https://vsmv.in",
       "highlights": [
@@ -90,16 +114,16 @@
       ],
       "images": [
         {
-          "img_path": "",
-          "caption": "Image"
+          "img_path": "img/madhuLogo.webp",
+          "caption": "Logo"
         },
         {
-          "img_path": "",
-          "caption": "Image"
+          "img_path": "img/madhuLogo.webp",
+          "caption": "Logo"
         },
         {
-          "img_path": "",
-          "caption": "Image"
+          "img_path": "img/madhuLogo.webp",
+          "caption": "Logo"
         }
       ]
     }
@@ -107,7 +131,7 @@
   "volunteer_experience": [
     {
       "organization": "Madhugunjan Cultural Music & Arts Organisation.",
-      "position": "Technical Manager",
+      "position": "Technical & Social Media Manager",
       "url": "https://vsmv.in",
       "start_date": "02/04/2022",
       "end_date": "Present",
@@ -116,6 +140,20 @@
         "Manage all technical aspects of event production including sound, lighting, and displays.",
         "Lead social media marketing campaigns resulting in increased event visibility and attendance.",
         "Recognized with a medal of honor for outstanding technical contributions to the event."
+      ],
+      "images": [
+        {
+          "img_path": "img/madhu.webp",
+          "caption": "Instagram Views"
+        },
+        {
+          "img_path": "img/madhu1.webp",
+          "caption": "Graphic Design Volunteers List"
+        },
+        {
+          "img_path": "img/madhu2.webp",
+          "caption": "Artist Banner"
+        }
       ]
     }
   ],
@@ -125,7 +163,7 @@
       "location": "Raipur, C.G, India",
       "url": "https://sample.com",
       "degrees": ["Computer Science Engineering", "2011-2015"],
-      "graduation_date": "(Dropped Out)   Like many successful tech entrepreneurs and developers, my career path prioritized hands-on experience and practical skill development. My technical proficiency and project portfolio demonstrate my capabilities as a developer, following in the footsteps of innovators who have similarly leveraged practical expertise to create impactful solutions."
+      "graduation_date": ""
     },
     {
       "institution": "Carmel Convent School",
@@ -155,10 +193,6 @@
         {
           "img_path": "img/musicPassion.webp",
           "caption": "My Music Passion"
-        },
-        {
-          "img_path": "img/musicPassion1.webp",
-          "caption": "Music for Sanity"
         }
       ]
     },
@@ -169,11 +203,6 @@
         {
           "img_path": "img/adventure1.webp",
           "caption": "Long Rides + Coffee = Bliss"
-        },
-
-        {
-          "img_path": "img/adventure2.webp",
-          "caption": "Leap of Faith"
         }
       ]
     }

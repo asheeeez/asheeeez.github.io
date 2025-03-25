@@ -345,6 +345,7 @@ nav {
   .hero_section {
     margin-top: 150px;
     flex-direction: column;
+    position: relative;
     padding-left: 20px; /* Added margin left */
     padding-right: 20px; /* Added margin right */
     padding-top: 20px; /* Added margin top */
@@ -359,7 +360,7 @@ nav {
   }
 
   .hero_content_right {
-    margin-top: 2rem;
+    margin-top: -30px;
   }
 
   .hero_content_right img {
@@ -369,10 +370,10 @@ nav {
   .hero_content_left h1 {
     font-size: 3rem; /* Responsive size for mobile */
   }
-  .hero_content_left span {
-    font-size: 1.8rem; /* Responsive size for mobile */
-  }
+
   .hero_content_left p {
+    max-width: 100%;
+    text-align: center;
     font-size: 1.2rem; /* Responsive size for mobile */
   }
 
@@ -399,6 +400,16 @@ nav {
   .mobile-nav {
     display: block;
     height: 15vh;
+  }
+  .hero_content_right img {
+    max-width: 80%;
+    max-height: 80%;
+  }
+  .keyboard-image-box{
+    position: relative; /* Changed to relative */
+    bottom: 0; /* Removed negative value */
+    right: 0; /* Removed negative value */
+    max-width: 400px;
   }
 }
 /* Lenis Smooth Scroll Styles */
@@ -443,8 +454,8 @@ html.lenis {
 }
 .keyboard-image-box {
   position: absolute;
-  bottom: -45%;
-  right: 25%;
+  bottom: -45%; /* Adjust as needed */
+  right: 25%; /* Adjust as needed */
   max-width: 600px;
 }
 .keyboard-image {
