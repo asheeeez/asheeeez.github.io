@@ -19,6 +19,20 @@ body {
   grid-template-rows: auto 1fr auto;
   min-height: 100vh;
 }
+/* ... other styles ... */
+
+.page-content {
+  min-height: 100vh; /* Add this line */
+}
+
+.page-content .container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+/* ... other styles ... */
+
+/* Typography */
 
 h1,
 h2,
@@ -139,6 +153,14 @@ section {
 
 .page-header,
 .page-footer {
+  background: rgba(209, 72, 72, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(2px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  
   background: var(--header-footer-bg-color);
 }
 
@@ -457,6 +479,18 @@ blockquote {
   .side-gallery {
     grid-template-columns: 1fr;
   }
+
+  .page-content > aside {
+    position: sticky;
+    top: 10px;
+    align-self: start;
+  }
+
+  .page-content > aside > section {
+    margin-bottom: 0;
+  }
+
+
 }
 
 @media print {
