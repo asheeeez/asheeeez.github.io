@@ -229,15 +229,24 @@ nav {
 .mobile-nav-links {
   display: none;
   position: absolute;
-  top: 60px;
+  top: 100px;
   left: 0;
   width: 100%;
-  background-color: #000;
+  height: max-content;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  background-color: #24313ef0;
   padding: 10px;
+  border-radius: 4px;
 }
 
-.mobile-nav-links a {
-  transition: transform 0.3s ease, color 0.3s ease;
+.mobile-nav-links a:active {
+  .mobile-nav-links {
+    display: hidden;
+  }
+}
+.mobile-nav-links a:onclick {
+  transform: translateY(-2px);
 }
 
 .mobile-nav-links a:hover {
@@ -384,6 +393,7 @@ nav {
     display: flex;
     flex-direction: column;
     width: 100%;
+    gap: 20px;
     background-color: #333;
     position: absolute;
     top: 60px;
@@ -398,7 +408,13 @@ nav {
 
   .mobile-nav {
     display: block;
-    height: 15vh;
+    height: 75px;
+    width: 90%;
+    background-color: #411b1b2b;
+    border-radius: 4px;
+    justify-content: baseline;
+    align-items: center;
+    
   }
   .hero_content_right img {
     max-width: 80%;
@@ -632,8 +648,8 @@ html.lenis {
     sans-serif ";
 }
 
-.contact_section input[type=" text"],
-.contact_section input[type=" email"],
+.contact_section input[type=" text "],
+.contact_section input[type=" email "],
 .contact_section textarea {
   width: 100%;
   padding: 10px;
@@ -661,8 +677,7 @@ html.lenis {
   border-radius: 35px;
   cursor: pointer;
   font-size: 1.1em;
-  font-family: "
-      Mulish ", sans-serif";
+  font-family: "Mulish ", sans-serif";
 }
 
 .contact_section button[type="submit"]:hover {
@@ -696,7 +711,6 @@ form {
   border-radius: 4px;
   font-family: "Mulish", sans-serif;
   width: 90%;
-  
 }
 .contact-form-container {
   display: flex;
@@ -722,4 +736,81 @@ form {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
+}
+
+@media screen and (max-width: 768px) {
+  .scrolling-text-container {
+    display: none;
+  }
+  .marquee-container {
+    width: 100vw;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  .keyboard-image-box {
+    display: flex;
+    width: 50%;
+    height: 70%;
+    justify-content: center;
+    align-items: center;
+    x: 0;
+    y: 0;
+    padding: 0;
+    margin: 0;
+  }
+  .hero_section .hero_content_left .role-container span {
+    position: relative;
+    overflow: hidden;
+    font-size: 3rem;
+    color: #5c544d;
+    font-weight: bolder;
+  }
+  .contact_section .contact-container h2 {
+    font-family: "Philosopher", sans-serif;
+    font-size: 3rem;
+    font-weight: bolder;
+    margin-bottom: 0.5rem;
+    color: #f6f7eb;
+    line-height: 1.2;
+    text-align: center;
+    opacity: 0.7;
+  }
+  .contact_section .contact-container p {
+    font-family: "Mulish", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    padding-left: 20px;
+    padding-right: 20px;
+    line-height: 1.6;
+    max-width: 100%;
+    opacity: 0.8;
+    justify-content: center;;
+    align-items: center;
+    text-align: center;
+  }
+  .marquee-container .marquee .span {
+    font-size: 18px;
+  }
+  .contact-form-container {
+    display: flex;
+    width: 80vw;
+    height: 100%;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+  .contact-form-right-img {
+    display: none;
+  }
+  .contact-form-left{
+    width: 100%;
+    translate: none;
+    rotate: none;
+    scale: none;
+    opacity: 0.569;
+    transform: translate3d(0px, 0px, 0px);
+  }
 }

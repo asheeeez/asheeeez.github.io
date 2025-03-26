@@ -206,6 +206,13 @@ document.addEventListener("DOMContentLoaded", () => {
       mobileNavLinks.style.display === "block" ? "none" : "block";
   });
 
+  // Close mobile nav on link click
+  document.querySelectorAll('.mobile-nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileNavLinks.style.display = 'none';
+    });
+  });
+
   const scrollingTextContainer = document.querySelector(
     ".scrolling-text-container"
   );
@@ -253,25 +260,14 @@ marqueeTl.to(marquee, {
     gsap.set(marquee, { x: 0 }); // Reset to avoid jumps
   },
 });
-gsap.set(".contact-form-left", { x: -240, opacity: 0 });
-gsap.set(".contact-form-right-img", { x: 200, opacity: 0 });
-gsap.set(".contact-container h2", { y: 50, opacity: 0 });
-gsap.set(".contact-container p", { y: 50, opacity: 0 });
-
-gsap.to(".contact-form-left", {
-  x: 0,
-  opacity: 1,
-  duration: 2,
-  ease: "sine.inOut",
-  scrollTrigger: {
-    trigger: ".contact_section",
-    start: "top bottom",
-    end: "bottom top",
-    scrub: true,
-  },
-}),
-  gsap.to(".contact-form-right-img", {
-    x: -300,
+let mm = gsap.matchMedia();
+mm.add("(min-width: 800px)", () => {
+  gsap.set(".contact-form-right-img", { x: 200, opacity: 0 });
+  gsap.set(".contact-container h2", { y: 50, opacity: 0 });
+  gsap.set(".contact-container p", { y: 50, opacity: 0 });
+  gsap.set(".contact-form-left", { x: -240, opacity: 0 });
+  gsap.to(".contact-form-left", {
+    x: 0,
     opacity: 1,
     duration: 2,
     ease: "sine.inOut",
@@ -282,25 +278,41 @@ gsap.to(".contact-form-left", {
       scrub: true,
     },
   }),
-  gsap.to(".contact-container h2", {
-    y: 0,
-    opacity: 0.5,
-    duration: 2,
-    ease: "sine.inOut",
-    scrollTrigger: {
-      trigger: ".contact_section",
-      start: "top bottom",
-      end: "bottom top",
-    },
-  }),
-  gsap.to(".contact-container p", {
-    y: 0,
-    opacity: 0.5,
-    duration: 3,
-    ease: "sine.inOut",
-    scrollTrigger: {
-      trigger: ".contact_section",
-      start: "top bottom",
-      end: "bottom top",
-    },
-  });
+    gsap.to(".contact-form-right-img", {
+      x: -300,
+      opacity: 1,
+      duration: 2,
+      ease: "sine.inOut",
+      scrollTrigger: {
+        trigger: ".contact_section",
+        start: "top bottom",
+        end: "bottom top",
+        scrub: true,
+      },
+    }),
+    gsap.to(".contact-container h2", {
+      y: 0,
+      opacity: 0.5,
+      duration: 2,
+      ease: "sine.inOut",
+      scrollTrigger: {
+        trigger: ".contact_section",
+        start: "top bottom",
+        end: "bottom top",
+      },
+    }),
+    gsap.to(".contact-container p", {
+      y: 0,
+      opacity: 0.5,
+      duration: 3,
+      ease: "sine.inOut",
+      scrollTrigger: {
+        trigger: ".contact_section",
+        start: "top bottom",
+        end: "bottom top",
+      },
+    });
+
+
+
+});
