@@ -256,8 +256,8 @@ ScrollTrigger.create({
   start: 'top bottom',
   end: 'bottom top',
   onUpdate: (self) => {
-    const scrollSpeed = self.getVelocity() * 0.01; // Adjust the multiplier as needed
-    const newDuration = Math.max(20, 80 - scrollSpeed * 100); // Adjust the range as needed
+    const scrollSpeed = self.getVelocity() * 0.05; // Adjust the multiplier as needed
+    const newDuration = Math.max(10, 80 - scrollSpeed * 100); // Adjust the range as needed
     marqueeTl.duration(newDuration);
   },
 });
