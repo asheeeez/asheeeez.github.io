@@ -23,12 +23,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Set initial states first (this is important)
   gsap.set("nav", { y: -200, opacity: 0 });
-  gsap.set(".hero_content_left h1", { y: 20, opacity: 0 });
-  gsap.set(".hero_content_left p", { y: 30, opacity: 0 });
+  gsap.set(".hero_content_left h1", { x: -20, opacity: 0 });
+  gsap.set(".hero_content_left p", { x: -30, opacity: 0 });
   gsap.set(".nav-links li", { opacity: 0, y: -30 });
-  gsap.set(".nav-resume", { opacity: 0, y: 20 });
-  gsap.set(".hero_content_right img", { y: 40, opacity: 0 });
-  gsap.set(".keyboard-image", { x: 0, y: 40, opacity: 0.1, rotate: 20 });
+  gsap.set(".nav-resume", { opacity: 0, y: -30 });
+  gsap.set(".hero_content_right img", { x: 40, opacity: 0 });
+  gsap.set(".keyboard-image", { x: 0, y: 40, opacity: 0.2, rotate: 20 });
   gsap.set(".scrolling-text-container", { opacity: 1, y: 0 });
 
   // Scroll-triggered animation for keyboard image
@@ -62,13 +62,21 @@ document.addEventListener("DOMContentLoaded", () => {
     stagger: 0.5,
     ease: "sine.inOut",
   });
+  // Animate resume button
+  tl.to(".nav-resume", {
+    opacity: 1,
+    y: 0,
+    duration: 1,
+    stagger: 1,
+    ease: "sine.inOut",
+  });
 
   // Animate hero content
   tl.to(
     ".hero_content_left h1",
     {
-      y: 0,
-      opacity: 1,
+      x: 0,
+      opacity: 0.9,
       duration: 1,
       ease: "sine.inOut",
     },
@@ -77,8 +85,8 @@ document.addEventListener("DOMContentLoaded", () => {
   tl.to(
     ".hero_content_left p",
     {
-      y: 0,
-      opacity: 1,
+      x: 0,
+      opacity: 0.9,
       duration: 1,
       ease: "sine.inOut",
     },
@@ -87,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
   tl.to(
     ".hero_content_right img",
     {
-      y: 0,
+      x: 0,
       opacity: 1,
       duration: 1,
       ease: "sine.inOut",
@@ -105,14 +113,6 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     "-=0.7"
   );
-
-  // Animate resume button
-  gsap.to(".nav-resume", {
-    opacity: 1,
-    y: 0,
-    duration: 1,
-    ease: "sine.inOut",
-  });
 
   // Add smooth scrolling for anchor links
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
@@ -206,9 +206,11 @@ document.addEventListener("DOMContentLoaded", () => {
       mobileNavLinks.style.display === "block" ? "none" : "block";
   });
 
-  const scrollingTextContainer = document.querySelector('.scrolling-text-container');
-  const scrollingText = document.querySelector('.scrolling-text');
-  const letters = document.querySelectorAll('.scrolling-text span');
+  const scrollingTextContainer = document.querySelector(
+    ".scrolling-text-container"
+  );
+  const scrollingText = document.querySelector(".scrolling-text");
+  const letters = document.querySelectorAll(".scrolling-text span");
 
   const numLetters = letters.length;
   const angleIncrement = 360 / numLetters;
@@ -217,8 +219,10 @@ document.addEventListener("DOMContentLoaded", () => {
     letter.style.transform = `rotate(${index * angleIncrement}deg)`;
   });
 
-  document.addEventListener('mousemove', (event) => {
-    const scrollingTextContainer = document.querySelector('.scrolling-text-container');
+  document.addEventListener("mousemove", (event) => {
+    const scrollingTextContainer = document.querySelector(
+      ".scrolling-text-container"
+    );
     if (scrollingTextContainer) {
       gsap.to(scrollingTextContainer, {
         left: event.clientX - scrollingTextContainer.offsetWidth / 2,
@@ -229,8 +233,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
-const marquee = document.querySelector('.marquee');
-const marqueeText = document.querySelector('.marquee span');
+const marquee = document.querySelector(".marquee");
+const marqueeText = document.querySelector(".marquee span");
 
 // Duplicate text for seamless looping
 const duplicateText = marqueeText.cloneNode(true);
@@ -247,14 +251,13 @@ marqueeTl.to(marquee, {
   ease: "linear",
   onComplete: () => {
     gsap.set(marquee, { x: 0 }); // Reset to avoid jumps
-  }
+  },
 });
 
-
 ScrollTrigger.create({
-  trigger: '.marquee-container',
-  start: 'top bottom',
-  end: 'bottom top',
+  trigger: ".marquee-container",
+  start: "top bottom",
+  end: "bottom top",
   onUpdate: (self) => {
     const scrollSpeed = self.getVelocity() * 0.05; // Adjust the multiplier as needed
     const newDuration = Math.max(10, 80 - scrollSpeed * 100); // Adjust the range as needed
