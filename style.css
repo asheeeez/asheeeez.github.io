@@ -18,10 +18,10 @@ html {
   overflow-x: hidden;
   background-color: #110404;
   font-family: "Mulish", sans-serif;
-  background: rgb(115, 98, 87);
+  background: rgb(80, 43, 18);
   background: linear-gradient(
-    212deg,
-    rgba(115, 98, 87, 1) 0%,
+    213deg,
+    rgba(80, 43, 18, 1) 0%,
     rgba(17, 4, 4, 1) 65%
   );
 }
@@ -148,7 +148,7 @@ nav {
 .nav-resume a {
   display: inline-block;
   padding: 8px 16px;
-  background-color: #4f1313;
+  background-color: #081b21;
   color: white;
   text-decoration: none;
   border-radius: 4px;
@@ -158,8 +158,8 @@ nav {
 }
 
 .nav-resume a:hover {
-  box-shadow: 0 0 12px #4f1313;
-  background-color: #4f1313;
+  box-shadow: 0 0 12px #0c2a33;
+  background-color: #0c2a33;
   transition: background-color 0.3s ease;
 }
 
@@ -580,7 +580,6 @@ html.lenis {
   top: 50px;
   color: #ffffff;
   font-size: 10rem;
-  /* animation: marquee 1000s linear infinite; */
   opacity: 0.2;
   font-weight: bolder;
 }
