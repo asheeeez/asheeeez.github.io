@@ -37,10 +37,10 @@ document.addEventListener("DOMContentLoaded", () => {
     x: -50,
     y: -350,
     scrollTrigger: {
-      trigger: ".hero_section2", // You can adjust the trigger element
-      start: "top bottom", // Adjust start position as needed
-      end: "bottom top", // Adjust end position as needed
-      scrub: "true", // Smoothly link animation to scroll
+      trigger: ".hero_section2",
+      start: "top bottom",
+      end: "bottom top",
+      scrub: "true",
     },
   });
 
@@ -74,7 +74,6 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     "-=0.5"
   );
-
   tl.to(
     ".hero_content_left p",
     {
@@ -102,7 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
       opacity: 0.4,
       duration: 3,
       ease: "sine.inOut",
-      delay: 0.5, // Delay the animation by 2 seconds
+      delay: 0.5,
     },
     "-=0.7"
   );
@@ -159,7 +158,7 @@ document.addEventListener("DOMContentLoaded", () => {
             el.style.transform = "none";
           }
         });
-    }, 1000); // Check after 1 second
+    }, 1000);
   });
 
   const roles = [
@@ -187,7 +186,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Remove active class after a delay to fade out
     setTimeout(() => {
       roleElement.classList.remove("active");
-    }, 1500); // Show each role for 1.5 seconds
+    }, 1500);
 
     // Update the index for the next role
     currentIndex = (currentIndex + 1) % roles.length;
@@ -217,4 +216,48 @@ document.addEventListener("DOMContentLoaded", () => {
   letters.forEach((letter, index) => {
     letter.style.transform = `rotate(${index * angleIncrement}deg)`;
   });
+
+  document.addEventListener('mousemove', (event) => {
+    const scrollingTextContainer = document.querySelector('.scrolling-text-container');
+    if (scrollingTextContainer) {
+      gsap.to(scrollingTextContainer, {
+        left: event.clientX - scrollingTextContainer.offsetWidth / 2,
+        top: event.clientY - scrollingTextContainer.offsetHeight / 2,
+        duration: 0.5, // Adjust duration as needed
+        ease: "elastic.out(1, 0.75)", // Apply elastic easing
+      });
+    }
+  });
+});
+const marquee = document.querySelector('.marquee');
+const marqueeText = document.querySelector('.marquee span');
+
+// Duplicate text for seamless looping
+const duplicateText = marqueeText.cloneNode(true);
+marquee.appendChild(duplicateText);
+
+// Set up infinite scrolling effect
+gsap.set(marquee, { x: 0 });
+
+const marqueeTl = gsap.timeline({ repeat: -1, defaults: { ease: "none" } });
+
+marqueeTl.to(marquee, {
+  x: "-50%", // Move half of the duplicated content to maintain continuity
+  duration: 10,
+  ease: "linear",
+  onComplete: () => {
+    gsap.set(marquee, { x: 0 }); // Reset to avoid jumps
+  }
+});
+
+
+ScrollTrigger.create({
+  trigger: '.marquee-container',
+  start: 'top bottom',
+  end: 'bottom top',
+  onUpdate: (self) => {
+    const scrollSpeed = self.getVelocity() * 0.01; // Adjust the multiplier as needed
+    const newDuration = Math.max(20, 80 - scrollSpeed * 100); // Adjust the range as needed
+    marqueeTl.duration(newDuration);
+  },
 });
