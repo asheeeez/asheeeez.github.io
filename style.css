@@ -18,11 +18,11 @@ html {
   overflow-x: hidden;
   background-color: #110404;
   font-family: "Mulish", sans-serif;
-  background: rgb(80, 43, 18);
+  background: rgb(14, 30, 41);
   background: linear-gradient(
-    213deg,
-    rgba(80, 43, 18, 1) 0%,
-    rgba(17, 4, 4, 1) 65%
+    240deg,
+    rgba(14, 30, 41, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
   );
 }
 p {
@@ -148,7 +148,7 @@ nav {
 .nav-resume a {
   display: inline-block;
   padding: 8px 16px;
-  background-color: #081b21;
+  background-color: #528881;
   color: white;
   text-decoration: none;
   border-radius: 4px;
@@ -158,8 +158,8 @@ nav {
 }
 
 .nav-resume a:hover {
-  box-shadow: 0 0 12px #0c2a33;
-  background-color: #0c2a33;
+  box-shadow: 0 0 12px #385e59;
+  background-color: #385e59;
   transition: background-color 0.3s ease;
 }
 
@@ -594,7 +594,7 @@ html.lenis {
   align-items: center;
   min-height: 100vh;
 }
-.contact_section .contact-container h2{
+.contact_section .contact-container h2 {
   font-family: "Philosopher", sans-serif;
   font-size: 4rem;
   font-weight: 700;
@@ -604,7 +604,7 @@ html.lenis {
   text-align: center;
   opacity: 0.7;
 }
-.contact_section .contact-container p{
+.contact_section .contact-container p {
   font-family: "Mulish", sans-serif;
   font-size: 1.4rem;
   margin-bottom: 2rem;
@@ -613,7 +613,7 @@ html.lenis {
   opacity: 0.8;
   align-items: center;
   text-align: center;
-  }
+}
 .contact_section form {
   display: flex;
   flex-direction: column;
@@ -627,11 +627,12 @@ html.lenis {
   margin-bottom: 5px;
   font-weight: bold;
   color: #f6f7eb;
-  font-family: "Mulish", sans-serif";
+  font-family: "Mulish",
+    sans-serif ";
 }
 
-.contact_section input[type="text"],
-.contact_section input[type="email"],
+.contact_section input[type=" text"],
+.contact_section input[type=" email"],
 .contact_section textarea {
   width: 100%;
   padding: 10px;
@@ -659,7 +660,8 @@ html.lenis {
   border-radius: 35px;
   cursor: pointer;
   font-size: 1.1em;
-  font-family: "Mulish", sans-serif";
+  font-family: "
+      Mulish ", sans-serif";
 }
 
 .contact_section button[type="submit"]:hover {
@@ -667,37 +669,47 @@ html.lenis {
   color: white;
   transition: background-color 0.3s ease;
 }
-form{
+form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #4f13130e;
+  background-color: #385e5929;
   padding: 20px;
+  z-index: 45;
   border-radius: 10px;
   margin-bottom: 50px;
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: #0e1e2979;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .contact_section input[type="text"],
 .contact_section input[type="email"],
 .contact_section textarea {
-  font-size: 1em;
-  color: #ffffffc7;
-  background-color: #33333314;
+  font-size: 1.2em;
+  color: #ffffff;
+  background-color: #8b8a8a65;
+  padding: 10px;
+  margin-bottom: 5px;
+  border: 1px solid #385e5976;
+  border-radius: 4px;
+  font-family: "Mulish", sans-serif;
+  width: 90%;
+  
 }
 .contact-form-container {
   display: flex;
-  width: 90vw;
+  width: 80vw;
   height: 100%;
   margin: 0 auto;
   justify-content: space-between;
   align-items: center;
-  
 }
 .contact-form-left {
   width: 40%;
   height: 100%;
+  justify-content: center;
+  align-items: center;
 }
 .contact-form-right-img {
   width: 60%;
@@ -709,8 +721,4 @@ form{
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
-}
-
-.contact-form-left:hover .scrolling-text-container .scrolling-text {
-  display: none;
 }
