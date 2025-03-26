@@ -559,19 +559,18 @@ html.lenis {
 }
 .marquee-container {
   width: 100vw;
-  height: 200px;
+  height: 100%;
   position: relative;
   overflow: hidden;
 }
 
 .marquee {
   width: max-content;
-  height: 100%;
+  height: max-content;
   display: flex;
   white-space: nowrap;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 100px;
   color: #ffffff;
   font-size: 10rem;
   animation: marquee 10s linear infinite;
