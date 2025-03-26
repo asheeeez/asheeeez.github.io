@@ -245,9 +245,6 @@ nav {
     display: hidden;
   }
 }
-.mobile-nav-links a:onclick {
-  transform: translateY(-2px);
-}
 
 .mobile-nav-links a:hover {
   transform: translateY(-2px);
