@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
   gsap.set(".nav-links li", { opacity: 0, y: -30 });
   gsap.set(".nav-resume", { opacity: 0, y: -30 });
   gsap.set(".hero_content_right img", { x: 40, opacity: 0 });
-  gsap.set(".keyboard-image", { x: 0, y: 40, opacity: 0.2, rotate: 20 });
+  gsap.set(".keyboard-image", { x: 0, y: 20, opacity: 0.3, rotate: 20 });
   gsap.set(".scrolling-text-container", { opacity: 1, y: 0 });
 
   // Scroll-triggered animation for keyboard image
@@ -106,8 +106,8 @@ document.addEventListener("DOMContentLoaded", () => {
     ".keyboard-image",
     {
       y: 0,
-      opacity: 0.4,
-      duration: 3,
+      opacity: 0.3,
+      duration: 2,
       ease: "sine.inOut",
       delay: 0.5,
     },
@@ -247,20 +247,9 @@ const marqueeTl = gsap.timeline({ repeat: -1, defaults: { ease: "none" } });
 
 marqueeTl.to(marquee, {
   x: "-50%", // Move half of the duplicated content to maintain continuity
-  duration: 10,
+  duration: 70,
   ease: "linear",
   onComplete: () => {
     gsap.set(marquee, { x: 0 }); // Reset to avoid jumps
-  },
-});
-
-ScrollTrigger.create({
-  trigger: ".marquee-container",
-  start: "top bottom",
-  end: "bottom top",
-  onUpdate: (self) => {
-    const scrollSpeed = self.getVelocity() * 0.05; // Adjust the multiplier as needed
-    const newDuration = Math.max(10, 80 - scrollSpeed * 100); // Adjust the range as needed
-    marqueeTl.duration(newDuration);
   },
 });
