@@ -313,6 +313,34 @@ mm.add("(min-width: 800px)", () => {
       },
     });
 
+});
 
+document.addEventListener('DOMContentLoaded', () => {
+  const scrollingTextContainer = document.querySelector(".scrolling-text-container");
 
+  // Function to hide the scrolling text container
+  function hideScrollingText() {
+    if (scrollingTextContainer) {
+      scrollingTextContainer.style.display = 'none';
+    }
+  }
+
+  // Function to show the scrolling text container
+  function showScrollingText() {
+    if (scrollingTextContainer) {
+      scrollingTextContainer.style.display = 'block';
+    }
+  }
+
+  // Add event listeners to all links
+  document.querySelectorAll('a').forEach(link => {
+    link.addEventListener('mouseover', hideScrollingText);
+    link.addEventListener('mouseout', showScrollingText);
+  });
+
+  // Add event listeners to all form fields
+  document.querySelectorAll('input, textarea, button').forEach(field => {
+    field.addEventListener('mouseover', hideScrollingText);
+    field.addEventListener('mouseout', showScrollingText);
+  });
 });
