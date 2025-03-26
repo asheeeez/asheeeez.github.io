@@ -596,8 +596,8 @@ html.lenis {
 }
 .contact_section .contact-container h2 {
   font-family: "Philosopher", sans-serif;
-  font-size: 4rem;
-  font-weight: 700;
+  font-size: 6rem;
+  font-weight: bolder;
   margin-bottom: 1rem;
   color: #f6f7eb;
   line-height: 1.2;
@@ -606,8 +606,9 @@ html.lenis {
 }
 .contact_section .contact-container p {
   font-family: "Mulish", sans-serif;
-  font-size: 1.4rem;
-  margin-bottom: 2rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
   line-height: 1.6;
   max-width: 100%;
   opacity: 0.8;
@@ -690,7 +691,7 @@ form {
   color: #ffffff;
   background-color: #8b8a8a65;
   padding: 10px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   border: 1px solid #385e5976;
   border-radius: 4px;
   font-family: "Mulish", sans-serif;
