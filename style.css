@@ -722,6 +722,7 @@ form {
   height: 100%;
   justify-content: center;
   align-items: center;
+  z-index: 123;
 }
 .contact-form-right-img {
   width: 60%;

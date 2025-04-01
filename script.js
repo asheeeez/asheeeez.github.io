@@ -337,4 +337,3 @@ document.addEventListener('DOMContentLoaded', () => {
     field.addEventListener('mouseout', showScrollingText);
   });
 });
-
